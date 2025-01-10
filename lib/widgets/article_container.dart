@@ -19,7 +19,7 @@ class ArticleContainer extends StatelessWidget {
           color: Color(0xFF55C500),
           borderRadius: BorderRadius.all(
             Radius.circular(32),
-          )
+          ),
         ),
       ),
     );
