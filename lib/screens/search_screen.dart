@@ -44,6 +44,8 @@ class _SearchScreenState extends State<SearchScreen> {
       ),
       body: Column(
         children: [
+
+          // 検索ボックス
           Padding(
             padding: const EdgeInsets.symmetric(
               vertical: 12,
@@ -63,6 +65,8 @@ class _SearchScreenState extends State<SearchScreen> {
               },
             ),
           ),
+
+          // 検索結果
           ArticleContainer(
             article: Article(
               title: 'テスト記事1',
