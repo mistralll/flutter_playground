@@ -5,6 +5,7 @@ import 'package:flutter_playground/widgets/article_container.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:flutter_playground/models/article.dart';
+import 'package:flutter_playground/models/user.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -62,7 +63,18 @@ class _SearchScreenState extends State<SearchScreen> {
               },
             ),
           ),
-          const ArticleContainer(),
+          ArticleContainer(
+            article: Article(
+              title: 'テスト記事1',
+              user: User(
+                id: 'test_1',
+                profileImageUrl: 'https://support.discord.com/system/photos/1500300735082/ZD_Avatar_the_Last_AirBender__2_.jpg',
+              ),
+              createdAt: DateTime.now(),
+              tags: ['Flutter', 'test'],
+              url: 'https://example.com',
+            ),
+          ),
         ],
       ),
     );
