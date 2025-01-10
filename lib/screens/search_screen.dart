@@ -13,6 +13,8 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
+  List<Article> articles = [];
+
   Future<List<Article>> searchQiita(String keyword) async {
     final uri = Uri.https('qiita.com', '/api/v2/items', {
       'query': 'title:$keyword',
@@ -38,7 +40,29 @@ class _SearchScreenState extends State<SearchScreen> {
       appBar: AppBar(
         title: const Text('Qitta Search'),
       ),
-      body: Container(),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 12,
+              horizontal: 36,
+            ),
+            child: TextField(
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                hintText: '検索ワードを入力してください',
+              ),
+              onSubmitted: (String value) async {
+                final results = await searchQiita(value);
+                setState(()=>articles = results);
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
