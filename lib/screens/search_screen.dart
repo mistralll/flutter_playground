@@ -57,7 +57,7 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
               onSubmitted: (String value) async {
                 final results = await searchQiita(value);
-                setState(()=>articles = results);
+                setState(() => articles = results);
               },
             ),
           ),
