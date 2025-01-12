@@ -83,7 +83,8 @@ class ArticleContainer extends StatelessWidget {
                         Icons.favorite,
                         color: Colors.white,
                       ),
-                      Text(article.likesCount.toString(),
+                      Text(
+                        article.likesCount.toString(),
                         style: const TextStyle(
                           fontSize: 12,
                           color: Colors.white,
@@ -101,11 +102,13 @@ class ArticleContainer extends StatelessWidget {
                         backgroundImage: NetworkImage(article.user.profileImageUrl),
                       ),
                       const SizedBox(height: 4),
-                      Text(article.user.id,
+                      Text(
+                        article.user.id,
                         style: const TextStyle(
                           fontSize: 12,
                           color: Colors.white,
-                        ))
+                        )
+                      ),
                     ],
                   )
                 ],
