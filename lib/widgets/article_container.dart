@@ -20,6 +20,7 @@ class ArticleContainer extends StatelessWidget {
         vertical: 12,
       ),
       child: GestureDetector(
+        // タップ時の動作
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
