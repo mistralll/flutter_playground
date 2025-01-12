@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/models/article.dart';
 import 'package:intl/intl.dart';
+
+import '../models/article.dart';
 
 class ArticleContainer extends StatelessWidget {
   const ArticleContainer({

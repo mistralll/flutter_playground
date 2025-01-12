@@ -1,4 +1,4 @@
-import 'package:flutter_playground/models/user.dart';
+import '../models/user.dart';
 
 class Article {
   Article({
